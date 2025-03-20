@@ -47,6 +47,7 @@
             label1.Size = new Size(404, 72);
             label1.TabIndex = 0;
             label1.Text = "Название задачи";
+            label1.Click += this.label1_Click;
             // 
             // label2
             // 
@@ -130,7 +131,26 @@
         }
 
         #endregion
-
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label1!"); // Простейший код для проверки
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label2!"); // Простейший код для проверки
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label3!"); // Простейший код для проверки
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label4!"); // Простейший код для проверки
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по textbox1!"); // Простейший код для проверки
+        }
         private Label label1;
         private Label label2;
         private Label label3;
