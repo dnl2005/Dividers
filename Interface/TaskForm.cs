@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class Form2 : Form
+    public partial class TaskForm : Form
     {
-        public Form2()
+        public TaskForm()
         {
             InitializeComponent();
         }
