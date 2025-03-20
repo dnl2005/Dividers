@@ -1,3 +1,5 @@
+using System.Drawing.Text;
+
 namespace Interface
 {
     public partial class Form1 : Form
@@ -29,6 +31,11 @@ namespace Interface
         private void button7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
