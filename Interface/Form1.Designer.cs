@@ -175,6 +175,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Делители-разделители туда-сюда-смотрители";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

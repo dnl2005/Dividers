@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class TaskForm : Form
+    public partial class TaskFormTwo : Form
     {
-        public TaskForm()
+        public TaskFormTwo()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

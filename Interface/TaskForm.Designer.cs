@@ -38,51 +38,52 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label1.Location = new Point(353, 48);
+            label1.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label1.Location = new Point(211, 9);
             label1.Name = "label1";
-            label1.Size = new Size(458, 49);
+            label1.Size = new Size(686, 72);
             label1.TabIndex = 0;
             label1.Text = "Наибольший общий делитель";
-            label1.Click += this.label1_Click;
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Monotype Corsiva", 13.8F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(420, 128);
+            label2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.Location = new Point(312, 114);
             label2.Name = "label2";
-            label2.Size = new Size(282, 27);
+            label2.Size = new Size(488, 49);
             label2.TabIndex = 1;
             label2.Text = "Введите число для нахождения";
-            label2.Click += this.label2_Click;
+            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Monotype Corsiva", 13.8F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label3.Location = new Point(517, 300);
+            label3.Font = new Font("Monotype Corsiva", 22.2F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label3.Location = new Point(477, 365);
             label3.Name = "label3";
-            label3.Size = new Size(108, 27);
+            label3.Size = new Size(175, 45);
             label3.TabIndex = 2;
             label3.Text = "Результат";
-            label3.Click += this.label3_Click;
+            label3.Click += label3_Click;
             // 
             // button1
             // 
-            button1.Font = new Font("Monotype Corsiva", 12F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(517, 234);
+            button1.Font = new Font("Monotype Corsiva", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            button1.Location = new Point(468, 245);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(168, 63);
             button1.TabIndex = 3;
             button1.Text = "Найти";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(439, 184);
+            textBox1.Location = new Point(351, 184);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(263, 27);
+            textBox1.Size = new Size(423, 27);
             textBox1.TabIndex = 4;
             // 
             // TaskForm
@@ -97,13 +98,24 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TaskForm";
-            Text = "Form2";
+            Text = "TaskForm";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label1!"); // Простейший код для проверки
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label2!"); // Простейший код для проверки
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Кликнули по label3!"); // Простейший код для проверки
+        }
         private Label label1;
         private Label label2;
         private Label label3;
