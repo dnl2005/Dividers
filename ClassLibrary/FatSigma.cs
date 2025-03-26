@@ -4,37 +4,34 @@
     {
         public static int[] Task1(int N)
         {
-            int[] divisors = [];
+            List<int> divisors = new List<int>();
 
             for (int i = 1; i <= N; i++)
             {
                 if (N % i == 0)
                 {
-                    _ = divisors.Append(i);
+                    divisors.Add(i);
                 }
             }
 
-            return divisors;
+            return divisors.ToArray();
         }
-
-
-
-
 
         public static int[] Task2(int m, int n)
         {
-            int[] result = [];
+            List<int> result = new List<int>();
 
             for (int i = m; i <= n; i++)
             {
                 if (CountDivisors(i) == 5)
                 {
-                    _ = result.Append(i);
+                    result.Add(i);
                 }
             }
 
-            return result;
+            return result.ToArray();
         }
+
         private static int CountDivisors(int num)
         {
             int count = 0;
@@ -50,30 +47,25 @@
             return count;
         }
 
-
-
-
         public static int[] Task3(int N)
         {
-            int[] primeFactors = [];
+            List<int> primeFactors = new List<int>();
 
             for (int i = 2; i <= N; i++)
             {
                 while (N % i == 0)
                 {
-                    _ = primeFactors.Append(i);
+                    primeFactors.Add(i);
                     N /= i;
                 }
             }
 
-            return primeFactors;
+            return primeFactors.ToArray();
         }
-
-
 
         public static int[] Task4(int N)
         {
-            int[] primes = [];
+            List<int> primes = new List<int>();
             int count = 0;
             int num = 2;
 
@@ -81,14 +73,15 @@
             {
                 if (IsPrime(num))
                 {
-                    _ = primes.Append(num);
+                    primes.Add(num);
                     count++;
                 }
                 num++;
             }
 
-            return primes;
+            return primes.ToArray();
         }
+
         private static bool IsPrime(int num)
         {
             if (num < 2)
@@ -107,22 +100,21 @@
             return true;
         }
 
-
-
         public static int[] Task5(int N)
         {
-            int[] primes = [];
+            List<int> primes = new List<int>();
             bool[] isPrime = new bool[N * N];
+
             for (int i = 2; i < isPrime.Length; i++)
             {
                 isPrime[i] = true;
             }
 
-            for (int p = 2; primes.Length < N; p++)
+            for (int p = 2; primes.Count < N; p++)
             {
                 if (isPrime[p])
                 {
-                    _ = primes.Append(p);
+                    primes.Add(p);
 
                     for (int i = p * p; i < isPrime.Length; i += p)
                     {
@@ -131,10 +123,8 @@
                 }
             }
 
-            return primes;
+            return primes.ToArray();
         }
-
-
 
         public static int Task6(int a, int b)
         {
@@ -146,8 +136,6 @@
             return a;
         }
 
-
-
         private static int FindGCD(int a, int b)
         {
             while (b != 0)
@@ -157,9 +145,11 @@
 
             return a;
         }
+
         public static int Task7(int a, int b)
         {
             return a * b / FindGCD(a, b);
         }
     }
+
 }

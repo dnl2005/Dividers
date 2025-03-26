@@ -28,98 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            lblInput = new Label();
+            lblSecondInput = new Label();
+            txtInput = new TextBox();
+            txtSecondInput = new TextBox();
+            Calculate = new Button();
+            TaskTitle = new Label();
+            result = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblInput
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label1.Location = new Point(211, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(686, 72);
-            label1.TabIndex = 0;
-            label1.Text = "Наибольший общий делитель";
-            label1.Click += label1_Click;
+            lblInput.AutoSize = true;
+            lblInput.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            lblInput.Location = new Point(78, 273);
+            lblInput.Margin = new Padding(8, 0, 8, 0);
+            lblInput.Name = "lblInput";
+            lblInput.Size = new Size(445, 72);
+            lblInput.TabIndex = 1;
+            lblInput.Text = "Начало интервала";
             // 
-            // label2
+            // lblSecondInput
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(312, 114);
-            label2.Name = "label2";
-            label2.Size = new Size(488, 49);
-            label2.TabIndex = 1;
-            label2.Text = "Введите число для нахождения";
-            label2.Click += label2_Click;
+            lblSecondInput.AutoSize = true;
+            lblSecondInput.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            lblSecondInput.Location = new Point(852, 273);
+            lblSecondInput.Margin = new Padding(8, 0, 8, 0);
+            lblSecondInput.Name = "lblSecondInput";
+            lblSecondInput.Size = new Size(419, 72);
+            lblSecondInput.TabIndex = 2;
+            lblSecondInput.Text = "Конец интервала";
+
             // 
-            // label3
+            // txtInput
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Monotype Corsiva", 22.2F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label3.Location = new Point(477, 365);
-            label3.Name = "label3";
-            label3.Size = new Size(175, 45);
-            label3.TabIndex = 2;
-            label3.Text = "Результат";
-            label3.Click += label3_Click;
+            txtInput.Location = new Point(146, 372);
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(301, 52);
+            txtInput.TabIndex = 4;
+            txtInput.TextAlign = HorizontalAlignment.Center;
+
             // 
-            // button1
+            // txtSecondInput
             // 
-            button1.Font = new Font("Monotype Corsiva", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(468, 245);
-            button1.Name = "button1";
-            button1.Size = new Size(168, 63);
-            button1.TabIndex = 3;
-            button1.Text = "Найти";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            txtSecondInput.Location = new Point(920, 372);
+            txtSecondInput.Name = "txtSecondInput";
+            txtSecondInput.Size = new Size(311, 52);
+            txtSecondInput.TabIndex = 5;
+            txtSecondInput.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox1
+            // Calculate
             // 
-            textBox1.Location = new Point(351, 184);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(423, 27);
-            textBox1.TabIndex = 4;
+            Calculate.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            Calculate.Location = new Point(561, 483);
+            Calculate.Name = "Calculate";
+            Calculate.Size = new Size(223, 97);
+            Calculate.TabIndex = 6;
+            Calculate.Text = "Найти";
+            Calculate.UseVisualStyleBackColor = true;
+            Calculate.Click += Calculate_Click;
+            // 
+            // TaskTitle
+            // 
+            TaskTitle.Dock = DockStyle.Top;
+            TaskTitle.Font = new Font("Monotype Corsiva", 48F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            TaskTitle.Location = new Point(0, 0);
+            TaskTitle.Margin = new Padding(8, 0, 8, 0);
+            TaskTitle.Name = "TaskTitle";
+            TaskTitle.Size = new Size(1359, 193);
+            TaskTitle.TabIndex = 0;
+            TaskTitle.Text = "Название задачи";
+            TaskTitle.TextAlign = ContentAlignment.MiddleCenter;
+
+            // 
+            // result
+            // 
+            result.Location = new Point(30, 583);
+            result.Name = "result";
+            result.Size = new Size(1278, 204);
+            result.TabIndex = 7;
+            result.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TaskForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(20F, 49F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(199, 210, 242);
-            ClientSize = new Size(1111, 591);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(1359, 796);
+            Controls.Add(result);
+            Controls.Add(TaskTitle);
+            Controls.Add(Calculate);
+            Controls.Add(txtSecondInput);
+            Controls.Add(txtInput);
+            Controls.Add(lblSecondInput);
+            Controls.Add(lblInput);
+            Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
+            Margin = new Padding(8, 9, 8, 9);
             Name = "TaskForm";
-            Text = "TaskForm";
+            RightToLeft = RightToLeft.No;
+            Text = "TaskFormTwo";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private void label1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Кликнули по label1!"); // Простейший код для проверки
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Кликнули по label2!"); // Простейший код для проверки
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Кликнули по label3!"); // Простейший код для проверки
-        }
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button1;
-        private TextBox textBox1;
+
+        
+        private Label lblInput;
+        private Label lblSecondInput;
+        private TextBox txtInput;
+        private TextBox txtSecondInput;
+        private Button Calculate;
+        private Label TaskTitle;
+        private Label result;
     }
 }

@@ -28,97 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            GreatestCommonDivisor = new Button();
+            SmallestCommonMultiple = new Button();
+            Divisors = new Button();
+            ListPrimeNumbers = new Button();
+            Factorization = new Button();
+            ListPrimeNumbers_Eratosthenes = new Button();
+            FiveDivisorsInterval_Euclid = new Button();
             label1 = new Label();
             label2 = new Label();
-            button8 = new Button();
+            OpenTermsOfUse = new Button();
             SuspendLayout();
             // 
-            // button1
+            // GreatestCommonDivisor
             // 
-            button1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(139, 244);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(471, 83);
-            button1.TabIndex = 0;
-            button1.Text = "Наибольший общий делитель";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            GreatestCommonDivisor.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            GreatestCommonDivisor.Location = new Point(139, 244);
+            GreatestCommonDivisor.Margin = new Padding(3, 4, 3, 4);
+            GreatestCommonDivisor.Name = "GreatestCommonDivisor";
+            GreatestCommonDivisor.Size = new Size(471, 83);
+            GreatestCommonDivisor.TabIndex = 0;
+            GreatestCommonDivisor.Text = "Наибольший общий делитель";
+            GreatestCommonDivisor.UseVisualStyleBackColor = true;
+            GreatestCommonDivisor.Click += GreatestCommonDivisor_Click;
             // 
-            // button2
+            // SmallestCommonMultiple
             // 
-            button2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button2.Location = new Point(639, 244);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(473, 83);
-            button2.TabIndex = 1;
-            button2.Text = "Наименьшее общее кратное";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            SmallestCommonMultiple.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            SmallestCommonMultiple.Location = new Point(639, 244);
+            SmallestCommonMultiple.Margin = new Padding(3, 4, 3, 4);
+            SmallestCommonMultiple.Name = "SmallestCommonMultiple";
+            SmallestCommonMultiple.Size = new Size(473, 83);
+            SmallestCommonMultiple.TabIndex = 1;
+            SmallestCommonMultiple.Text = "Наименьшее общее кратное";
+            SmallestCommonMultiple.UseVisualStyleBackColor = true;
+            SmallestCommonMultiple.Click += SmallestCommonMultiple_Click;
             // 
-            // button3
+            // Divisors
             // 
-            button3.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button3.Location = new Point(139, 377);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(275, 83);
-            button3.TabIndex = 2;
-            button3.Text = "Делители";
-            button3.UseVisualStyleBackColor = true;
+            Divisors.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            Divisors.Location = new Point(139, 377);
+            Divisors.Margin = new Padding(3, 4, 3, 4);
+            Divisors.Name = "Divisors";
+            Divisors.Size = new Size(275, 83);
+            Divisors.TabIndex = 2;
+            Divisors.Text = "Делители";
+            Divisors.UseVisualStyleBackColor = true;
+            Divisors.Click += Divisors_Click;
             // 
-            // button4
+            // ListPrimeNumbers
             // 
-            button4.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button4.Location = new Point(448, 377);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(363, 83);
-            button4.TabIndex = 3;
-            button4.Text = "Список простых чисел";
-            button4.UseVisualStyleBackColor = true;
+            ListPrimeNumbers.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            ListPrimeNumbers.Location = new Point(448, 377);
+            ListPrimeNumbers.Margin = new Padding(3, 4, 3, 4);
+            ListPrimeNumbers.Name = "ListPrimeNumbers";
+            ListPrimeNumbers.Size = new Size(363, 83);
+            ListPrimeNumbers.TabIndex = 3;
+            ListPrimeNumbers.Text = "Список простых чисел";
+            ListPrimeNumbers.UseVisualStyleBackColor = true;
+            ListPrimeNumbers.Click += ListPrimeNumbers_Click;
             // 
-            // button5
+            // Factorization
             // 
-            button5.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button5.Location = new Point(837, 377);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(275, 83);
-            button5.TabIndex = 4;
-            button5.Text = "Факторизация";
-            button5.UseVisualStyleBackColor = true;
+            Factorization.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            Factorization.Location = new Point(837, 377);
+            Factorization.Margin = new Padding(3, 4, 3, 4);
+            Factorization.Name = "Factorization";
+            Factorization.Size = new Size(275, 83);
+            Factorization.TabIndex = 4;
+            Factorization.Text = "Факторизация";
+            Factorization.UseVisualStyleBackColor = true;
+            Factorization.Click += Factorization_Click;
             // 
-            // button6
+            // ListPrimeNumbers_Eratosthenes
             // 
-            button6.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button6.Location = new Point(139, 507);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(471, 141);
-            button6.TabIndex = 5;
-            button6.Text = "Список простых чисел \n (алгоритм Эратосфена)";
-            button6.UseVisualStyleBackColor = true;
+            ListPrimeNumbers_Eratosthenes.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            ListPrimeNumbers_Eratosthenes.Location = new Point(139, 507);
+            ListPrimeNumbers_Eratosthenes.Margin = new Padding(3, 4, 3, 4);
+            ListPrimeNumbers_Eratosthenes.Name = "ListPrimeNumbers_Eratosthenes";
+            ListPrimeNumbers_Eratosthenes.Size = new Size(471, 141);
+            ListPrimeNumbers_Eratosthenes.TabIndex = 5;
+            ListPrimeNumbers_Eratosthenes.Text = "Список простых чисел \n (алгоритм Эратосфена)";
+            ListPrimeNumbers_Eratosthenes.UseVisualStyleBackColor = true;
+            ListPrimeNumbers_Eratosthenes.Click += ListPrimeNumbers_Eratosthenes_Click;
             // 
-            // button7
+            // FiveDivisorsInterval_Euclid
             // 
-            button7.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button7.Location = new Point(639, 507);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(473, 141);
-            button7.TabIndex = 6;
-            button7.Text = "5 делителей на интервале (алгоритм Эвклида)";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            FiveDivisorsInterval_Euclid.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            FiveDivisorsInterval_Euclid.Location = new Point(639, 507);
+            FiveDivisorsInterval_Euclid.Margin = new Padding(3, 4, 3, 4);
+            FiveDivisorsInterval_Euclid.Name = "FiveDivisorsInterval_Euclid";
+            FiveDivisorsInterval_Euclid.Size = new Size(473, 141);
+            FiveDivisorsInterval_Euclid.TabIndex = 6;
+            FiveDivisorsInterval_Euclid.Text = "5 делителей на интервале (алгоритм Эвклида)";
+            FiveDivisorsInterval_Euclid.UseVisualStyleBackColor = true;
+            FiveDivisorsInterval_Euclid.Click += FiveDivisorsInterval_Euclid_Click;
             // 
             // label1
             // 
@@ -140,21 +144,21 @@
             label2.TabIndex = 8;
             label2.Text = "Выберите задачу";
             // 
-            // button8
+            // OpenTermsOfUse
             // 
-            button8.BackColor = Color.FromArgb(56, 137, 235);
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Arial Narrow", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(1200, 691);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(40, 57);
-            button8.TabIndex = 9;
-            button8.Text = "?";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            OpenTermsOfUse.BackColor = Color.FromArgb(56, 137, 235);
+            OpenTermsOfUse.FlatAppearance.BorderSize = 0;
+            OpenTermsOfUse.FlatStyle = FlatStyle.Flat;
+            OpenTermsOfUse.Font = new Font("Arial Narrow", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            OpenTermsOfUse.ForeColor = Color.White;
+            OpenTermsOfUse.Location = new Point(1200, 691);
+            OpenTermsOfUse.Margin = new Padding(3, 4, 3, 4);
+            OpenTermsOfUse.Name = "OpenTermsOfUse";
+            OpenTermsOfUse.Size = new Size(40, 57);
+            OpenTermsOfUse.TabIndex = 9;
+            OpenTermsOfUse.Text = "?";
+            OpenTermsOfUse.UseVisualStyleBackColor = false;
+            OpenTermsOfUse.Click += OpenTermsOfUse_Click;
             // 
             // Form1
             // 
@@ -162,35 +166,34 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(199, 210, 242);
             ClientSize = new Size(1254, 764);
-            Controls.Add(button8);
+            Controls.Add(OpenTermsOfUse);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(FiveDivisorsInterval_Euclid);
+            Controls.Add(ListPrimeNumbers_Eratosthenes);
+            Controls.Add(Factorization);
+            Controls.Add(ListPrimeNumbers);
+            Controls.Add(Divisors);
+            Controls.Add(SmallestCommonMultiple);
+            Controls.Add(GreatestCommonDivisor);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Делители-разделители туда-сюда-смотрители";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button GreatestCommonDivisor;
+        private Button SmallestCommonMultiple;
+        private Button Divisors;
+        private Button ListPrimeNumbers;
+        private Button Factorization;
+        private Button ListPrimeNumbers_Eratosthenes;
+        private Button FiveDivisorsInterval_Euclid;
         private Label label1;
         private Label label2;
-        private Button button8;
+        private Button OpenTermsOfUse;
     }
 }
