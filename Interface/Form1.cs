@@ -20,7 +20,8 @@ namespace Interface
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -31,15 +32,46 @@ namespace Interface
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TaskForm f2 = new TaskForm();
+            f2.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
