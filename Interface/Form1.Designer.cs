@@ -74,17 +74,19 @@
             button3.TabIndex = 2;
             button3.Text = "Делители";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
             button4.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button4.Location = new Point(448, 377);
+            button4.Location = new Point(431, 377);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(363, 83);
+            button4.Size = new Size(383, 83);
             button4.TabIndex = 3;
             button4.Text = "Список простых чисел";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -96,6 +98,7 @@
             button5.TabIndex = 4;
             button5.Text = "Факторизация";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -107,6 +110,7 @@
             button6.TabIndex = 5;
             button6.Text = "Список простых чисел \n (алгоритм Эратосфена)";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -129,6 +133,7 @@
             label1.Size = new Size(255, 72);
             label1.TabIndex = 7;
             label1.Text = "Делители";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
