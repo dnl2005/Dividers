@@ -43,9 +43,9 @@
             // button1
             // 
             button1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(259, 105);
+            button1.Location = new Point(254, 105);
             button1.Name = "button1";
-            button1.Size = new Size(201, 51);
+            button1.Size = new Size(213, 51);
             button1.TabIndex = 2;
             button1.Text = "Рассчитать";
             button1.UseVisualStyleBackColor = true;

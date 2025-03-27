@@ -121,6 +121,12 @@ namespace Interface
         {
             string output = "";
 
+            if (list.Count == 0)
+            {
+                label5.Text = "Таких чисел не существует";
+                return;
+            }
+
             for (int i = 0; i < list.Count; i++)
             {
                 output += list[i];
