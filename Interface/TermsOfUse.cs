@@ -45,16 +45,16 @@ namespace Interface
             label2.Name = "label2";
             label2.Size = new Size(1154, 39);
             label2.TabIndex = 1;
-            label2.Text = "Задача 2. На интервале [m, n] найти все числа, у которых число различных делителей равно 5";
+            label2.Text = "Задача 2. На интервале [n, m] найти все числа, у которых число различных делителей равно 5";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(32, 264);
             label3.Name = "label3";
-            label3.Size = new Size(368, 39);
+            label3.Size = new Size(442, 39);
             label3.TabIndex = 2;
-            label3.Text = "Задача 3. Факторизовать N.";
+            label3.Text = "Задача 3. Факторизовать число N.";
             // 
             // label4
             // 
@@ -97,14 +97,14 @@ namespace Interface
             label8.AutoSize = true;
             label8.Location = new Point(32, 37);
             label8.Name = "label8";
-            label8.Size = new Size(579, 39);
+            label8.Size = new Size(943, 39);
             label8.TabIndex = 7;
-            label8.Text = "Числа для ввода должны быть натуральными";
+            label8.Text = "Числа для ввода должны быть натуральными (1, 2, 3, 4 ... но не 1.24 или A1)";
             // 
             // TermsOfUse
             // 
             BackColor = Color.FromArgb(199, 210, 242);
-            ClientSize = new Size(1293, 722);
+            ClientSize = new Size(1293, 588);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);

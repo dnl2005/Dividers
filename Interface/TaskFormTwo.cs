@@ -50,14 +50,21 @@ namespace Interface
             );
         }
 
-        private static int errorDispatcher(string number)
+        private static bool errorDispatcher(string number)
         {
             if (!int.TryParse(number, out var n))
             {
                 MessageBox.Show("Введено некорректное число (см. справку)");
+                return false;
             }
 
-            return n;
+            if (n <= 0)
+            {
+                MessageBox.Show("Число должно быть натуральным");
+                return false;
+            }
+
+            return true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,8 +79,18 @@ namespace Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = errorDispatcher(numberN);
-            int m = errorDispatcher(numberM);
+            int n = 0;
+            int m = 0;
+
+            if (errorDispatcher(numberN) && errorDispatcher(numberM))
+            {
+                n = int.Parse(numberN);
+                m = int.Parse(numberM);
+            }
+
+            else
+                return;
+
             List<int> numbers = new List<int>();
             int number = 0;
 
