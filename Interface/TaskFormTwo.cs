@@ -36,6 +36,11 @@ namespace Interface
                 30
             );
 
+            PlaceCenterRes();
+        }
+
+        private void PlaceCenterRes()
+        {
             label5.Anchor = AnchorStyles.None;
             label5.Location = new Point(
                 (ClientSize.Width - label4.Width) / 2,
@@ -67,7 +72,7 @@ namespace Interface
         {
             int n = errorDispatcher(numberN);
             int m = errorDispatcher(numberM);
-            int[] numbers = Array.Empty<int>();
+            List<int> numbers = new List<int>();
             int number = 0;
 
             switch (taskIndex)
@@ -75,14 +80,17 @@ namespace Interface
                 case 2:
                     numbers = FatSigma.Task2(n, m);
                     PrintList(numbers);
+                    PlaceCenterRes();
                     break;
                 case 6:
                     number = FatSigma.Task6(n, m);
                     PrintList(numbers);
+                    PlaceCenterRes();
                     break;
                 case 7:
                     number = FatSigma.Task7(n, m);
                     PrintInt(number);
+                    PlaceCenterRes();
                     break;
 
                 default:
@@ -90,18 +98,18 @@ namespace Interface
             }
         }
 
-        private void PrintList(int[] list)
+        private void PrintList(List<int> list)
         {
             string output = "";
 
             foreach (var item in list)
             {
-                if (list.Length == 1 || item.Equals(list.Last()))
+                if (list.Count == 1 || item.Equals(list.Last()))
                     output += item;
-
-                output += item + ", ";
+                else
+                    output += item + ", ";
             }
-
+            MessageBox.Show(output);
             label5.Text = output;
         }
 

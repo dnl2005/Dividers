@@ -13,14 +13,22 @@ public static class FatSigma
     {
         List<int> divisors = new List<int>(); //список делителей
 
-        for (int i = 1; i <= number; i++)
+        for (int i = 1; i <= Math.Sqrt(number); i++)
         {
             if (number % i == 0)
             {
-            divisors.Add(i);
-            }
-        }   
+                // Если i делит n, добавляем i и n/i
+                divisors.Add(i);
 
+                // Чтобы избежать дублирования (например, при i = n/i)
+                if (i != number / i)
+                {
+                    divisors.Add(number / i);
+                }
+            }
+        }
+
+        divisors.Sort();
         return divisors;
     }
 

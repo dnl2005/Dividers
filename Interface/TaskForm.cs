@@ -36,6 +36,11 @@ namespace Interface
                 40
             );
 
+            PlaceCenterRes();
+        }
+
+        private void PlaceCenterRes()
+        {
             label4.Anchor = AnchorStyles.None;
             label4.Location = new Point(
                 (ClientSize.Width - label4.Width) / 2,
@@ -43,12 +48,21 @@ namespace Interface
             );
         }
 
-        private static int errorDispatcher(string number)
+        private static bool errorDispatcher(string number)
         {
             if (!int.TryParse(number, out var n))
-                MessageBox.Show("Введено некорректное число (см. справку)");
+            { 
+                MessageBox.Show("Введено некорректное число (см. справку)"); 
+                return false; 
+            }
 
-            return n;
+            if (n <= 0)
+            { 
+                MessageBox.Show("Число должно быть натуральным"); 
+                return false; 
+            }
+
+            return true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -58,8 +72,14 @@ namespace Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = errorDispatcher(number);
-            int[] numbers = Array.Empty<int>();
+            int n = 0;
+
+            if (errorDispatcher(number))
+                n = int.Parse(number);
+            else
+                return;
+
+            List<int> numbers = new List<int>();
 
             switch (taskIndex)
             {
@@ -79,19 +99,24 @@ namespace Interface
                 default:
                     break;
             }
+
             PrintList(numbers);
+            PlaceCenterRes();
         }
 
-        private void PrintList(int[] list)
+        private void PrintList(List<int> list)
         {
             string output = "";
 
+            if (list.Count == 0)
+                label4.Text = "Таких чисел не существует";
+
             foreach (var item in list)
             {
-                if (list.Length == 1 || item.Equals(list.Last()))
+                if (list.Count == 1 || item.Equals(list.Last()))
                     output += item;
-
-                output += item + ", ";
+                else
+                    output += item + ", ";
             }
 
             label4.Text = output;
