@@ -34,19 +34,21 @@
             textBox2 = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
             button1 = new Button();
             panel1 = new Panel();
+            panel3 = new Panel();
+            textBox3 = new TextBox();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label1.Location = new Point(337, 34);
+            label1.Location = new Point(385, 45);
             label1.Name = "label1";
-            label1.Size = new Size(126, 57);
+            label1.Size = new Size(154, 72);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -54,27 +56,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            label2.Location = new Point(186, 0);
+            label2.Location = new Point(213, 0);
             label2.Name = "label2";
-            label2.Size = new Size(121, 39);
+            label2.Size = new Size(152, 49);
             label2.TabIndex = 1;
             label2.Text = "Число N";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            textBox1.Location = new Point(166, 42);
+            textBox1.Location = new Point(190, 56);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(184, 43);
+            textBox1.Size = new Size(210, 52);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            textBox2.Location = new Point(436, 42);
+            textBox2.Location = new Point(498, 56);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(184, 43);
+            textBox2.Size = new Size(210, 52);
             textBox2.TabIndex = 3;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
@@ -82,9 +86,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            label3.Location = new Point(455, 0);
+            label3.Location = new Point(520, 0);
             label3.Name = "label3";
-            label3.Size = new Size(126, 39);
+            label3.Size = new Size(158, 49);
             label3.TabIndex = 4;
             label3.Text = "Число M";
             // 
@@ -92,27 +96,19 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            label4.Location = new Point(315, 187);
+            label4.Location = new Point(360, 249);
             label4.Name = "label4";
-            label4.Size = new Size(150, 39);
+            label4.Size = new Size(189, 49);
             label4.TabIndex = 5;
             label4.Text = "Результат";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic);
-            label5.Location = new Point(341, 268);
-            label5.Name = "label5";
-            label5.Size = new Size(0, 39);
-            label5.TabIndex = 6;
             // 
             // button1
             // 
             button1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(290, 113);
+            button1.Location = new Point(331, 151);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(207, 56);
+            button1.Size = new Size(237, 75);
             button1.TabIndex = 7;
             button1.Text = "Рассчитать";
             button1.UseVisualStyleBackColor = true;
@@ -120,31 +116,58 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
-            panel1.Location = new Point(22, 94);
+            panel1.Location = new Point(25, 125);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(781, 356);
+            panel1.Size = new Size(893, 475);
             panel1.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            panel3.AutoScroll = true;
+            panel3.Controls.Add(textBox3);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            panel3.Location = new Point(0, 297);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(893, 178);
+            panel3.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            textBox3.Dock = DockStyle.Top;
+            textBox3.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox3.Location = new Point(0, 0);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ScrollBars = ScrollBars.Horizontal;
+            textBox3.Size = new Size(893, 91);
+            textBox3.TabIndex = 6;
+            textBox3.WordWrap = false;
             // 
             // TaskFormTwo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(199, 210, 242);
-            ClientSize = new Size(815, 462);
+            ClientSize = new Size(931, 616);
             Controls.Add(panel1);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TaskFormTwo";
             Text = "TaskFormTwo";
             Load += TaskFormTwo_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,8 +180,9 @@
         private TextBox textBox2;
         private Label label3;
         private Label label4;
-        private Label label5;
         private Button button1;
         private Panel panel1;
+        private Panel panel3;
+        private TextBox textBox3;
     }
 }

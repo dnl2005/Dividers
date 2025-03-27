@@ -46,17 +46,17 @@ namespace Interface
                 (label1.Location.Y + label1.Height + 20)
             );
 
-            PlaceCenterRes();
+            //PlaceCenterRes();
         }
 
-        private void PlaceCenterRes()
-        {
-            label4.Anchor = AnchorStyles.None;
-            label4.Location = new Point(
-                (panel1.Width - label4.Width) / 2,
-                label2.Location.Y + 50
-            );
-        }
+        //private void PlaceCenterRes()
+        //{
+        //    textBox2.Anchor = AnchorStyles.None;
+        //    textBox2.Location = new Point(
+        //        (panel1.Width - textBox2.Width) / 2,
+        //        label2.Location.Y + 50
+        //    );
+        //}
 
         private static bool errorDispatcher(string number)
         {
@@ -111,7 +111,7 @@ namespace Interface
             }
 
             PrintList(numbers);
-            PlaceCenterRes();
+            //PlaceCenterRes();
         }
 
         private void PrintList(List<int> list)
@@ -119,7 +119,7 @@ namespace Interface
             string output = "";
 
             if (list.Count == 0)
-                label4.Text = "Таких чисел не существует";
+                textBox2.Text = "Таких чисел не существует";
 
             for (int i = 0; i < list.Count; i++)
             {
@@ -131,7 +131,7 @@ namespace Interface
                 }
             }
 
-            label4.Text = output;
+            textBox2.Text = output;
         }
     }
 }

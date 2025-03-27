@@ -38,17 +38,17 @@ namespace Interface
 
             panel1.Anchor = AnchorStyles.None;
 
-            PlaceCenterRes();
+            //PlaceCenterRes();
         }
 
-        private void PlaceCenterRes()
-        {
-            label5.Anchor = AnchorStyles.None;
-            label5.Location = new Point(
-                (panel1.Width - label5.Width) / 2,
-                label4.Location.Y + 50
-            );
-        }
+        //private void PlaceCenterRes()
+        //{
+        //    textBox3.Anchor = AnchorStyles.None;
+        //    textBox3.Location = new Point(
+        //        (panel1.Width - textBox3.Width) / 2,
+        //        label4.Location.Y + 50
+        //    );
+        //}
 
         private static bool errorDispatcher(string number)
         {
@@ -99,17 +99,17 @@ namespace Interface
                 case 2:
                     numbers = FatSigma.Task2(n, m);
                     PrintList(numbers);
-                    PlaceCenterRes();
+                    //PlaceCenterRes();
                     break;
                 case 6:
                     number = FatSigma.Task6(n, m);
                     PrintInt(number);
-                    PlaceCenterRes();
+                    //PlaceCenterRes();
                     break;
                 case 7:
                     number = FatSigma.Task7(n, m);
                     PrintInt(number);
-                    PlaceCenterRes();
+                    //PlaceCenterRes();
                     break;
 
                 default:
@@ -123,7 +123,7 @@ namespace Interface
 
             if (list.Count == 0)
             {
-                label5.Text = "Таких чисел не существует";
+                textBox3.Text = "Таких чисел не существует";
                 return;
             }
 
@@ -135,12 +135,12 @@ namespace Interface
                     output += ", ";
             }
 
-            label5.Text = output;
+            textBox3.Text = output;
         }
 
         private void PrintInt(int number)
         {
-            label5.Text = number.ToString();
+            textBox3.Text = number.ToString();
         }
     }
 }
