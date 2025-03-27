@@ -3,7 +3,7 @@
 namespace ClassLibrary;
 
 public static class FatSigma
-{ 
+{
     /// <summary>
     /// Метод для нахождения всех делителей числа 
     /// </summary>
@@ -49,7 +49,7 @@ public static class FatSigma
         {
             if (Math.Sqrt(number) == (int)Math.Sqrt(number)) // если число является точным квадратом
             {
-                if (DivisorsCheck(number,5)==true) // то проверяем количесво его делителей
+                if (DivisorsCheck(number, 5) == true) // то проверяем количесво его делителей
                 {
                     result.Add(number);
                 }
@@ -103,25 +103,25 @@ public static class FatSigma
     public static List<int> Task3(int number)
     {
         List<int> primeFactors = new List<int>();
-        int num=number;
-        while (num%2==0) // проверка делимости на 2
+        int num = number;
+        while (num % 2 == 0) // проверка делимости на 2
         {
             primeFactors.Add(2);
             num = num / 2;
         }
         double number_sqrt = Math.Sqrt(number);
         //поиск делителей больше 2
-        for (int i = 3; i<= number_sqrt; i=i+2)
+        for (int i = 3; i <= number_sqrt; i = i + 2)
         {
             while (num % i == 0)
             {
                 primeFactors.Add(i);
-                num = num/i;
+                num = num / i;
             }
         }
         //обработка случая, когда наибольший простой делитель больше корня из числа
         //22
-        if (num >1 )
+        if (num > 1)
         {
             primeFactors.Add(num);
         }
@@ -136,11 +136,11 @@ public static class FatSigma
     /// <returns> возвращает список простых чисел </returns>
     public static List<int> Task4(int N)
     {
-        List<int>primes = new List<int>();
-        int count = 1; 
+        List<int> primes = new List<int>();
+        int count = 1;
         int num = 3;
         primes.Add(2); //сразу добавляем число 2 в список
-                        //учитываем это, при объявлении num, count ранее
+                       //учитываем это, при объявлении num, count ранее
         while (count < N)
         {
             if (IsPrime(num))
@@ -148,7 +148,7 @@ public static class FatSigma
                 primes.Add(num);
                 count++;
             }
-            num=num+2;
+            num = num + 2;
         }
 
         return primes;
@@ -197,8 +197,9 @@ public static class FatSigma
         {
             return new List<int> { 2, 3 };
         }
+
         //нахождение верхней границы решета
-        int limit = (int)(n * Math.Log(n) + n * Math.Log(Math.Log(n))) + 3; 
+        int limit = (int)(n * Math.Log(n) + n * Math.Log(Math.Log(n))) + n + 3; // +n+3 для гарантии
 
         bool[] isPrime = new bool[limit + 1]; //создание решета
         Array.Fill(isPrime, true);
@@ -206,24 +207,22 @@ public static class FatSigma
 
         List<int> primes = new List<int> { 2 };
 
-        for (int p = 3; p <= limit && primes.Count < n; p =p+2) //проесивание
+        for (int p = 3; p <= limit; p = p + 2) //просеивание
         {
-            if (isPrime[p]) 
+            if (isPrime[p])
             {
                 primes.Add(p);
-                for (int multiple = p * p; multiple <= limit; multiple += 2 * p)
+                if (primes.Count >= n) break; // выход при нахождении нужного количества
+
+                if ((long)p * p <= limit) // проверка переполнения
                 {
-                    //отсеивание лишних чисел
-                    isPrime[multiple] = false;
-               
+                    for (int multiple = p * p; multiple <= limit; multiple += 2 * p)
+                    {
+                        //отсеивание лишних чисел
+                        isPrime[multiple] = false;
+                    }
                 }
             }
-        }
-
-        //обрезание списка, если вышли за границу n
-        if (primes.Count > n)
-        {
-            primes = primes.Take(n).ToList();
         }
 
         return primes;
@@ -258,6 +257,6 @@ public static class FatSigma
         int gcd = Task6(a, b);
         int lcm = a * b / gcd;
         return lcm;
-     }
-    
+    }
+
 }

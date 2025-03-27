@@ -31,7 +31,6 @@ public class Test
         int number = 100;
         List <int> expected = new List<int> { 2, 2, 5, 5 };
         List <int> result = FatSigma.Task3(number);
-        Assert.AreEqual(expected.Count, result.Count);
         CollectionAssert.AreEqual(expected, result);
     }
     [TestMethod]
@@ -40,7 +39,6 @@ public class Test
         int number = 625;
         List<int> expected = new List<int> { 5, 5, 5, 5 };
         List<int> result = FatSigma.Task3(number);
-        Assert.AreEqual(expected.Count, result.Count);
         CollectionAssert.AreEqual(expected, result);
     }
 
@@ -50,7 +48,6 @@ public class Test
         int number = 1000;
         List<int> expected = new List<int> { 2, 2,2, 5, 5, 5 };
         List<int> result = FatSigma.Task3(number);
-        Assert.AreEqual(expected.Count, result.Count);
         CollectionAssert.AreEqual(expected, result);
     }
 
@@ -61,7 +58,6 @@ public class Test
         int n = 10;
         List <int> expected = new List<int> { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
         List <int> result = FatSigma.Task4(n);
-        Assert.AreEqual(expected.Count, result.Count);
         CollectionAssert.AreEqual(expected, result);
     }
 
@@ -71,7 +67,6 @@ public class Test
         int n = 10;
         List <int> expected = new List<int> { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
         List <int> result = FatSigma.Task5(n);
-        Assert.AreEqual(expected.Count, result.Count);
         CollectionAssert.AreEqual(expected, result);
     }
 
