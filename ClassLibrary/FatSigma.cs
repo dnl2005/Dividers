@@ -1,7 +1,12 @@
 ﻿namespace ClassLibrary
 {
     public static class FatSigma
-    {
+    { 
+        /// <summary>
+        /// Метод для нахождения всех делителей числа 
+        /// </summary>
+        /// <param name="N"> число </param>
+        /// <returns> возвращает массив делителей </returns>
         public static int[] Task1(int N)
         {
             int[] divisors = [];
@@ -20,7 +25,12 @@
 
 
 
-
+        /// <summary>
+        /// метод для нахождения всех чисел на интервале с ровно 5 делителями
+        /// </summary>
+        /// <param name="m"> начало интервала </param>
+        /// <param name="n"> конец интервала </param>
+        /// <returns> возвращает массив чисел </returns>
         public static int[] Task2(int m, int n)
         {
             int[] result = [];
@@ -35,6 +45,13 @@
 
             return result;
         }
+
+
+        /// <summary>
+        /// Метод для подсчета количества делителей у числа
+        /// </summary>
+        /// <param name="num"> число </param>
+        /// <returns> возвращает кол-во делителей у числа, цел. число </returns>
         private static int CountDivisors(int num)
         {
             int count = 0;
@@ -52,7 +69,11 @@
 
 
 
-
+        /// <summary>
+        /// Метод для факторизации числа
+        /// </summary>
+        /// <param name="N"> число </param>
+        /// <returns> возвращает массив простых множителей числа </returns>
         public static int[] Task3(int N)
         {
             int[] primeFactors = [];
@@ -70,7 +91,11 @@
         }
 
 
-
+        /// <summary>
+        /// Метод для нахождения первых N простых чисел
+        /// </summary>
+        /// <param name="N"> кол-во чисел для нахождения </param>
+        /// <returns> возвращает массив простых чисел </returns>
         public static int[] Task4(int N)
         {
             int[] primes = [];
@@ -89,6 +114,12 @@
 
             return primes;
         }
+
+        /// <summary>
+        /// Метод, проверяющий, является число простым или нет
+        /// </summary>
+        /// <param name="num"> число </param>
+        /// <returns> возвращает true/false </returns>
         private static bool IsPrime(int num)
         {
             if (num < 2)
@@ -108,7 +139,11 @@
         }
 
 
-
+        /// <summary>
+        /// Метод для нахождения первых N простых чисел по Эратосфену
+        /// </summary>
+        /// <param name="N"> кол-во простых чисел для нахождения </param>
+        /// <returns> возвращает массив простых чисел </returns>
         public static int[] Task5(int N)
         {
             int[] primes = [];
@@ -135,7 +170,13 @@
         }
 
 
-
+        /// <summary>
+        /// Метод для нахождения наибольшего общего делителя у 2 чисел
+        /// по Эвклиду
+        /// </summary>
+        /// <param name="a"> число а </param>
+        /// <param name="b"> число b </param>
+        /// <returns> возвращает НОД, число </returns>
         public static int Task6(int a, int b)
         {
             while (b != 0)
@@ -146,8 +187,12 @@
             return a;
         }
 
-
-
+        /// <summary>
+        /// Метод для нахождения НОК по Евклиду 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         private static int FindGCD(int a, int b)
         {
             while (b != 0)
@@ -155,8 +200,17 @@
                 (b, a) = (a, b % a);
             }
 
-            return a;
+            return a;       
         }
+
+        /// <summary>
+        /// Метод для нахождения наименьшего общего кратного 2 чисел
+        /// </summary>
+        /// <param name="a">Первое целое число </param>
+        /// <param name="b">Второе целое число </param>
+        /// <returns>
+        /// Наименьшее общее кратное чисел a и b.
+        /// </returns>
         public static int Task7(int a, int b)
         {
             return a * b / FindGCD(a, b);
