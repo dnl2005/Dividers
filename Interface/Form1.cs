@@ -4,76 +4,49 @@ namespace Interface
 {
     public partial class Form1 : Form
     {
-        // ==============TODO==============
-        // сделать меню выбора задачи (задача 1, задача 2...........................................)
-        // СПРАВКА С ОПИСАНИЕМ ЗАДАЧ!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // Сосиски в ТЕСТАХ
-        // КОММЕНТАТОРЫ (лайки)
-        // Поля ввода писел m и n (ну или просто m или n) появляются при выборе определенных задач-ч-ч (см. задания (порно))
-        // Овет в виде текста (Label), если ответов много(массив) записать через пробел
-        // Ошибки обработосьян
-        // На вход и выход числа целые (вроде только положительные)
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            TermsOfUse f2 = new TermsOfUse();
-            f2.ShowDialog();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskForm("Делители числа", 1).ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskFormTwo("Наибольший общий делитель (Эвклид)", 6).ShowDialog();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskFormTwo("Наименьшее общее кратное", 7).ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskForm("Список простых чисел", 4).ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskForm("Факторизация", 3).ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            TaskForm f2 = new TaskForm();
-            f2.ShowDialog();
+            new TaskForm("Список простых чисел (Решето Эратосфен)", 5).ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
+            new TaskFormTwo("Числа с различными делителями", 2).ShowDialog();
+        }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+           new TermsOfUse().ShowDialog();
         }
     }
 }

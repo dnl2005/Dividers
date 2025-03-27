@@ -28,120 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            task6 = new Button();
+            task7 = new Button();
+            task1 = new Button();
+            task4 = new Button();
+            task3 = new Button();
+            task5 = new Button();
+            task2 = new Button();
             label1 = new Label();
             label2 = new Label();
             button8 = new Button();
             SuspendLayout();
             // 
-            // button1
+            // task6
             // 
-            button1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button1.Location = new Point(139, 244);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(471, 83);
-            button1.TabIndex = 0;
-            button1.Text = "Наибольший общий делитель";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            task6.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task6.Location = new Point(559, 380);
+            task6.Name = "task6";
+            task6.Size = new Size(414, 106);
+            task6.TabIndex = 0;
+            task6.Text = "Наибольший общий делитель (алгоритм Эвклида)";
+            task6.UseVisualStyleBackColor = true;
+            task6.Click += button1_Click;
             // 
-            // button2
+            // task7
             // 
-            button2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button2.Location = new Point(639, 244);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(473, 83);
-            button2.TabIndex = 1;
-            button2.Text = "Наименьшее общее кратное";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            task7.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task7.Location = new Point(559, 183);
+            task7.Name = "task7";
+            task7.Size = new Size(414, 62);
+            task7.TabIndex = 1;
+            task7.Text = "Наименьшее общее кратное";
+            task7.UseVisualStyleBackColor = true;
+            task7.Click += button2_Click;
             // 
-            // button3
+            // task1
             // 
-            button3.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button3.Location = new Point(139, 377);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(275, 83);
-            button3.TabIndex = 2;
-            button3.Text = "Делители";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            task1.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task1.Location = new Point(122, 283);
+            task1.Name = "task1";
+            task1.Size = new Size(241, 62);
+            task1.TabIndex = 2;
+            task1.Text = "Делители";
+            task1.UseVisualStyleBackColor = true;
+            task1.Click += button3_Click;
             // 
-            // button4
+            // task4
             // 
-            button4.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button4.Location = new Point(431, 377);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(383, 83);
-            button4.TabIndex = 3;
-            button4.Text = "Список простых чисел";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            task4.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task4.Location = new Point(377, 283);
+            task4.Name = "task4";
+            task4.Size = new Size(335, 62);
+            task4.TabIndex = 3;
+            task4.Text = "Список простых чисел";
+            task4.UseVisualStyleBackColor = true;
+            task4.Click += button4_Click;
             // 
-            // button5
+            // task3
             // 
-            button5.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button5.Location = new Point(837, 377);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(275, 83);
-            button5.TabIndex = 4;
-            button5.Text = "Факторизация";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            task3.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task3.Location = new Point(732, 283);
+            task3.Name = "task3";
+            task3.Size = new Size(241, 62);
+            task3.TabIndex = 4;
+            task3.Text = "Факторизация";
+            task3.UseVisualStyleBackColor = true;
+            task3.Click += button5_Click;
             // 
-            // button6
+            // task5
             // 
-            button6.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button6.Location = new Point(139, 507);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(471, 141);
-            button6.TabIndex = 5;
-            button6.Text = "Список простых чисел \n (алгоритм Эратосфена)";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            task5.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task5.Location = new Point(122, 380);
+            task5.Name = "task5";
+            task5.Size = new Size(412, 106);
+            task5.TabIndex = 5;
+            task5.Text = "Список простых чисел \n (алгоритм Эратосфена)";
+            task5.UseVisualStyleBackColor = true;
+            task5.Click += button6_Click;
             // 
-            // button7
+            // task2
             // 
-            button7.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            button7.Location = new Point(639, 507);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(473, 141);
-            button7.TabIndex = 6;
-            button7.Text = "5 делителей на интервале (алгоритм Эвклида)";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            task2.Font = new Font("Monotype Corsiva", 24F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            task2.Location = new Point(120, 183);
+            task2.Name = "task2";
+            task2.Size = new Size(414, 62);
+            task2.TabIndex = 6;
+            task2.Text = "5 делителей на интервале";
+            task2.UseVisualStyleBackColor = true;
+            task2.Click += button7_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label1.Location = new Point(504, 28);
+            label1.Location = new Point(441, 21);
             label1.Name = "label1";
-            label1.Size = new Size(255, 72);
+            label1.Size = new Size(205, 57);
             label1.TabIndex = 7;
             label1.Text = "Делители";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Monotype Corsiva", 36F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(431, 124);
+            label2.Location = new Point(377, 93);
             label2.Name = "label2";
-            label2.Size = new Size(417, 72);
+            label2.Size = new Size(335, 57);
             label2.TabIndex = 8;
             label2.Text = "Выберите задачу";
             // 
@@ -152,10 +144,9 @@
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Arial Narrow", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(1200, 691);
-            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Location = new Point(1050, 518);
             button8.Name = "button8";
-            button8.Size = new Size(40, 57);
+            button8.Size = new Size(35, 43);
             button8.TabIndex = 9;
             button8.Text = "?";
             button8.UseVisualStyleBackColor = false;
@@ -163,37 +154,35 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(199, 210, 242);
-            ClientSize = new Size(1254, 764);
+            ClientSize = new Size(1097, 573);
             Controls.Add(button8);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(task2);
+            Controls.Add(task5);
+            Controls.Add(task3);
+            Controls.Add(task4);
+            Controls.Add(task1);
+            Controls.Add(task7);
+            Controls.Add(task6);
             Name = "Form1";
             Text = "Делители-разделители туда-сюда-смотрители";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button task6;
+        private Button task7;
+        private Button task1;
+        private Button task4;
+        private Button task3;
+        private Button task5;
+        private Button task2;
         private Label label1;
         private Label label2;
         private Button button8;
