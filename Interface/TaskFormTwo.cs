@@ -36,6 +36,8 @@ namespace Interface
                 30
             );
 
+            panel1.Anchor = AnchorStyles.None;
+
             PlaceCenterRes();
         }
 
@@ -43,19 +45,26 @@ namespace Interface
         {
             label5.Anchor = AnchorStyles.None;
             label5.Location = new Point(
-                (ClientSize.Width - label4.Width) / 2,
-                (ClientSize.Height - 100)
+                (panel1.Width - label5.Width) / 2,
+                label4.Location.Y + 50
             );
         }
 
-        private static int errorDispatcher(string number)
+        private static bool errorDispatcher(string number)
         {
             if (!int.TryParse(number, out var n))
             {
                 MessageBox.Show("Введено некорректное число (см. справку)");
+                return false;
             }
 
-            return n;
+            if (n <= 0)
+            {
+                MessageBox.Show("Число должно быть натуральным");
+                return false;
+            }
+
+            return true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -70,8 +79,18 @@ namespace Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = errorDispatcher(numberN);
-            int m = errorDispatcher(numberM);
+            int n = 0;
+            int m = 0;
+
+            if (errorDispatcher(numberN) && errorDispatcher(numberM))
+            {
+                n = int.Parse(numberN);
+                m = int.Parse(numberM);
+            }
+
+            else
+                return;
+
             List<int> numbers = new List<int>();
             int number = 0;
 
@@ -84,7 +103,7 @@ namespace Interface
                     break;
                 case 6:
                     number = FatSigma.Task6(n, m);
-                    PrintList(numbers);
+                    PrintInt(number);
                     PlaceCenterRes();
                     break;
                 case 7:
@@ -102,14 +121,14 @@ namespace Interface
         {
             string output = "";
 
-            foreach (var item in list)
+            for (int i = 0; i < list.Count; i++)
             {
-                if (list.Count == 1 || item.Equals(list.Last()))
-                    output += item;
-                else
-                    output += item + ", ";
+                output += list[i];
+
+                if (i != list.Count - 1)
+                    output += ", ";
             }
-            MessageBox.Show(output);
+
             label5.Text = output;
         }
 
