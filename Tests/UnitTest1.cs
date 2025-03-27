@@ -1,81 +1,77 @@
 using ClassLibrary;
-namespace Tests;
 
-
+namespace UnitTests;
 [TestClass]
-public class UnitTest1
+public class Test
 {
     [TestMethod]
-    public void Task1_test()
+    public void Task1_Tst()
     {
         int number = 100;
-        int[] divisors = FatSigma.Task1(number);
-        int[] expected_divisors = [1, 2, 4, 5, 10, 20, 25, 50, 100];
-        Assert.AreEqual(expected_divisors.Length, divisors.Length);
-        CollectionAssert.AreEqual(expected_divisors, divisors);
+        List <int> expected = new List<int> { 1, 2, 4, 5, 10, 20, 25, 50, 100 };
+        List <int> result = FatSigma.Task1(number);
+        Assert.AreEqual(expected.Count, result.Count);
+        CollectionAssert.AreEqual(expected, result);
     }
 
-
     [TestMethod]
-    public void Task2_test()
+    public void Task2_Test()
     {
         int a = 1;
         int b = 1000;
-        int[] result = FatSigma.Task2(a, b);
-        int[] expected_divisors = [16, 81, 625];
-        Assert.AreEqual(expected_divisors.Length, result.Length);
-        CollectionAssert.AreEqual(expected_divisors, result);
+        List <int> expected = new List<int> { 16, 81, 625 };
+        List <int> result = FatSigma.Task2(a, b);
+        Assert.AreEqual(expected.Count, result.Count);
+        CollectionAssert.AreEqual(expected, result);
     }
 
     [TestMethod]
-    public void Task3_test()
+    public void Task3_Test()
     {
         int number = 100;
-        int[] primeFactors = FatSigma.Task3(number);
-        int[] expected_divisors = [2, 2, 5, 5];
-        Assert.AreEqual(expected_divisors.Length, primeFactors.Length);
-        CollectionAssert.AreEqual(expected_divisors, primeFactors);
+        List <int> expected = new List<int> { 2, 2, 5, 5 };
+        List <int> result = FatSigma.Task3(number);
+        Assert.AreEqual(expected.Count, result.Count);
+        CollectionAssert.AreEqual(expected, result);
     }
 
     [TestMethod]
-    public void Task4_test()
+    public void Task4_Test()
     {
         int n = 10;
-        int[] primes = FatSigma.Task4(n);
-        int[] expected_divisors = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
-        Assert.AreEqual(expected_divisors.Length, primes.Length);
-        CollectionAssert.AreEqual(expected_divisors, primes);
+        List <int> expected = new List<int> { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
+        List <int> result = FatSigma.Task4(n);
+        Assert.AreEqual(expected.Count, result.Count);
+        CollectionAssert.AreEqual(expected, result);
     }
 
     [TestMethod]
-    public void Task5_test()
+    public void Task5_Test()
     {
         int n = 10;
-        int[] primes = FatSigma.Task5(n);
-        int[] expected_divisors = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
-        Assert.AreEqual(expected_divisors.Length, primes.Length);
-        CollectionAssert.AreEqual(expected_divisors, primes);
+        List <int> expected = new List<int> { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
+        List <int> result = FatSigma.Task5(n);
+        Assert.AreEqual(expected.Count, result.Count);
+        CollectionAssert.AreEqual(expected, result);
     }
 
-
     [TestMethod]
-    public void Task6_test()
+    public void Task6_Test()
     {
         int a = 40;
         int b = 100;
-        int gcd = FatSigma.Task6(a, b);
-        int expected_gcd = 20;
-        Assert.AreEqual(expected_gcd,gcd);
+        int expected = 20;
+        int result = FatSigma.Task6(a, b);
+        Assert.AreEqual(expected, result);
     }
 
     [TestMethod]
-    public void Task7_test()
+    public void Task7_Test()
     {
         int a = 40;
         int b = 100;
-        int lcm = FatSigma.Task7(a, b);
-        int expected_lcm = 200;
-        Assert.AreEqual(expected_lcm, lcm);
+        int expected = 200;
+        int result = FatSigma.Task7(a, b);
+        Assert.AreEqual(expected, result);
     }
-
 }
