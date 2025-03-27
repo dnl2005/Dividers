@@ -22,6 +22,8 @@ namespace Interface
         public TaskForm(string taskName, int taskIndex)
         {
             InitializeComponent();
+            
+
             this.taskName = taskName;
             this.taskIndex = taskIndex;
 
@@ -33,7 +35,15 @@ namespace Interface
             label1.Anchor = AnchorStyles.None;
             label1.Location = new Point(
                 (ClientSize.Width - label1.Width) / 2,
-                40
+                20
+            );
+
+            panel1.Anchor = AnchorStyles.None;
+
+            panel2.Anchor = AnchorStyles.None;
+            panel2.Location = new Point(
+                0, 
+                (label1.Location.Y + label1.Height + 20)
             );
 
             PlaceCenterRes();
@@ -43,23 +53,23 @@ namespace Interface
         {
             label4.Anchor = AnchorStyles.None;
             label4.Location = new Point(
-                (ClientSize.Width - label4.Width) / 2,
-                (ClientSize.Height - 100)
+                (panel1.Width - label4.Width) / 2,
+                label2.Location.Y + 50
             );
         }
 
         private static bool errorDispatcher(string number)
         {
             if (!int.TryParse(number, out var n))
-            { 
-                MessageBox.Show("Введено некорректное число (см. справку)"); 
-                return false; 
+            {
+                MessageBox.Show("Введено некорректное число (см. справку)");
+                return false;
             }
 
             if (n <= 0)
-            { 
-                MessageBox.Show("Число должно быть натуральным"); 
-                return false; 
+            {
+                MessageBox.Show("Число должно быть натуральным");
+                return false;
             }
 
             return true;
@@ -111,12 +121,14 @@ namespace Interface
             if (list.Count == 0)
                 label4.Text = "Таких чисел не существует";
 
-            foreach (var item in list)
+            for (int i = 0; i < list.Count; i++)
             {
-                if (list.Count == 1 || item.Equals(list.Last()))
-                    output += item;
-                else
-                    output += item + ", ";
+                output += list[i];
+
+                if (i != list.Count - 1)
+                {
+                    output += ", ";
+                }
             }
 
             label4.Text = output;

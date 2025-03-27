@@ -36,7 +36,7 @@ namespace Interface
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new TaskForm("Список простых чисел (Решето Эратосфен)", 5).ShowDialog();
+            new TaskForm("Список простых чисел\n(Решето Эратосфен)", 5).ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)

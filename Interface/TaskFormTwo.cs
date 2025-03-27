@@ -36,6 +36,8 @@ namespace Interface
                 30
             );
 
+            panel1.Anchor = AnchorStyles.None;
+
             PlaceCenterRes();
         }
 
@@ -43,8 +45,8 @@ namespace Interface
         {
             label5.Anchor = AnchorStyles.None;
             label5.Location = new Point(
-                (ClientSize.Width - label4.Width) / 2,
-                (ClientSize.Height - 100)
+                (panel1.Width - label5.Width) / 2,
+                label4.Location.Y + 50
             );
         }
 
@@ -84,7 +86,7 @@ namespace Interface
                     break;
                 case 6:
                     number = FatSigma.Task6(n, m);
-                    PrintList(numbers);
+                    PrintInt(number);
                     PlaceCenterRes();
                     break;
                 case 7:
@@ -102,14 +104,14 @@ namespace Interface
         {
             string output = "";
 
-            foreach (var item in list)
+            for (int i = 0; i < list.Count; i++)
             {
-                if (list.Count == 1 || item.Equals(list.Last()))
-                    output += item;
-                else
-                    output += item + ", ";
+                output += list[i];
+
+                if (i != list.Count - 1)
+                    output += ", ";
             }
-            MessageBox.Show(output);
+
             label5.Text = output;
         }
 
