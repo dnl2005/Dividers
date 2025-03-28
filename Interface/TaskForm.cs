@@ -95,22 +95,26 @@ namespace Interface
             {
                 case 1:
                     numbers = FatSigma.Task1(n);
+                    PrintList(numbers);
                     break;
                 case 3:
                     numbers = FatSigma.Task3(n);
+                    PrintFact(numbers);
                     break;
                 case 4:
                     numbers = FatSigma.Task4(n);
+                    PrintList(numbers);
                     break;
                 case 5:
                     numbers = FatSigma.Task5(n);
+                    PrintList(numbers);
                     break;
 
                 default:
                     break;
             }
 
-            PrintList(numbers);
+            
             //PlaceCenterRes();
         }
 
@@ -133,6 +137,24 @@ namespace Interface
 
             textBox2.Text = output;
         }
+
+        private void PrintFact(List<int> list)
+        {
+            string output = "";
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                output += list[i];
+
+                if (i != list.Count - 1)
+                {
+                    output += " * ";
+                }
+            }
+
+            textBox2.Text = output;
+        }
+
         static private void ShowError(string err)
         {
             ErrorMsg f3 = new ErrorMsg(err);
