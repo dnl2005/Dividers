@@ -181,12 +181,13 @@ public static class FatSigma
     /// <summary>
     /// Метод для нахождения первых n простых чисел с решето Эратосфена
     /// </summary>
-    /// <param name="n">кол-во простых чисел для нахождения</param>
-    /// <returns>список простых чисел</returns>
+    /// <param name="n"> кол-во простых чисел для нахождени я</param>
+    /// <returns> список простых чисел </returns>
     public static List<int> Task5(int n)
     {
-        if (n <= 0)
-            return new List<int>();
+        //суть алгоритма - нахождение некоторого количества простых чисел,
+        //отсеивая составные числа, кратные простым
+        //в массив isPrime вводится информация о том, является ли i-ое число простым 
 
         //возврат заготовки для малых значений n
         if (n == 1)
@@ -251,7 +252,7 @@ public static class FatSigma
     /// </summary>
     /// <param name="a">Первое число</param>
     /// <param name="b">Второе число</param>
-    /// <returns>НОК двух чисел</returns>
+    /// <returns> НОК двух чисел </returns>
     public static int Task7(int a, int b)
     {
         int gcd = Task6(a, b);
