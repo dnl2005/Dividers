@@ -62,13 +62,13 @@ namespace Interface
         {
             if (!int.TryParse(number, out var n))
             {
-                MessageBox.Show("Введено некорректное число (см. справку)");
+                ShowError("Введено некорректное число (см. справку)");
                 return false;
             }
 
             if (n <= 0)
             {
-                MessageBox.Show("Число должно быть натуральным");
+                ShowError("Число должно быть натуральным");
                 return false;
             }
 
@@ -132,6 +132,11 @@ namespace Interface
             }
 
             textBox2.Text = output;
+        }
+        static private void ShowError(string err)
+        {
+            ErrorMsg f3 = new ErrorMsg(err);
+            f3.ShowDialog();
         }
     }
 }
